@@ -12,7 +12,7 @@
 		328B48EA214ECB0700B4EFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328B48E8214ECB0700B4EFC9 /* Main.storyboard */; };
 		328B48EC214ECB0800B4EFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328B48EB214ECB0800B4EFC9 /* Assets.xcassets */; };
 		328B48EF214ECB0800B4EFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328B48ED214ECB0800B4EFC9 /* LaunchScreen.storyboard */; };
-		328B48F7214EF61A00B4EFC9 /* KeypadGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B48F6214EF61A00B4EFC9 /* KeypadGestureRecognizer.swift */; };
+		328B48F9214F318C00B4EFC9 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B48F8214F318C00B4EFC9 /* Keypad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		328B48EB214ECB0800B4EFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		328B48EE214ECB0800B4EFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		328B48F0214ECB0800B4EFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		328B48F6214EF61A00B4EFC9 /* KeypadGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadGestureRecognizer.swift; sourceTree = "<group>"; };
+		328B48F8214F318C00B4EFC9 /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				328B48E4214ECB0700B4EFC9 /* AppDelegate.swift */,
 				328B48E6214ECB0700B4EFC9 /* ViewController.swift */,
+				328B48F8214F318C00B4EFC9 /* Keypad.swift */,
 				328B48E8214ECB0700B4EFC9 /* Main.storyboard */,
-				328B48F6214EF61A00B4EFC9 /* KeypadGestureRecognizer.swift */,
 				328B48EB214ECB0800B4EFC9 /* Assets.xcassets */,
 				328B48ED214ECB0800B4EFC9 /* LaunchScreen.storyboard */,
 				328B48F0214ECB0800B4EFC9 /* Info.plist */,
@@ -139,8 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				328B48E7214ECB0700B4EFC9 /* ViewController.swift in Sources */,
+				328B48F9214F318C00B4EFC9 /* Keypad.swift in Sources */,
 				328B48E5214ECB0700B4EFC9 /* AppDelegate.swift in Sources */,
-				328B48F7214EF61A00B4EFC9 /* KeypadGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

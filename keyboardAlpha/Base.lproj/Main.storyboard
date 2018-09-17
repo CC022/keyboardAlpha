@@ -36,13 +36,13 @@ Z X C</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lxu-7n-nV1" appends="YES" id="ird-no-mit"/>
+                                    <outletCollection property="gestureRecognizers" destination="TFk-dG-mDf" appends="YES" id="hqI-DJ-93b"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-ap-Ive">
-                                <rect key="frame" x="118" y="134" width="139" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-ap-Ive">
+                                <rect key="frame" x="16" y="140" width="343" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -57,13 +57,13 @@ Z X C</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="lxu-7n-nV1" customClass="KeypadGestureRecognizer" customModule="keyboardAlpha" customModuleProvider="target">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="TFk-dG-mDf">
                     <connections>
-                        <action selector="keypadGestureHandler:" destination="BYZ-38-t0r" id="CKK-jf-YnQ"/>
+                        <action selector="keypad01GestureHandler:" destination="BYZ-38-t0r" id="HSq-eE-npw"/>
                     </connections>
-                </gestureRecognizer>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="117.59999999999999" y="118.22660098522168"/>
         </scene>
     </scenes>
 </document>
