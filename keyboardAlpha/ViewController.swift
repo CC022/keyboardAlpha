@@ -23,10 +23,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func keypad01TapHandler(_ sender: UITapGestureRecognizer) {
+        DisplayLabel.text?.append("S")
+    }
     
     @IBAction func keypad01GestureHandler(_ sender: UIPanGestureRecognizer) {
         if sender.state == .ended {
-//            DisplayLabel.text = sender.translation(in: self.view).debugDescription
             DisplayLabel.text = "\(keypad01Model.direct(of: sender.translation(in: self.view)))"
         }
     }
