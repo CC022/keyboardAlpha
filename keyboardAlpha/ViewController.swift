@@ -4,6 +4,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputField: UITextView!
     @IBOutlet weak var controlPad: UILabel!
+    @IBOutlet weak var capLockIndicator: UILabel!
     @IBOutlet weak var QWEPad: UILabel!
     @IBOutlet weak var RTYPad: UILabel!
     @IBOutlet weak var UIOPad: UILabel!
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
                     inputField.text.removeLast()
                 case .capsLock:
                     keypad01Model.capLocked.toggle()
+                    capLockIndicator.textColor = keypad01Model.capLocked ? UIColor.green : UIColor.orange
                 case .enter:
                     inputField.text.append("\n")
                 default:
