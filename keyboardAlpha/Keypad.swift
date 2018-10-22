@@ -85,7 +85,7 @@ class keypad {
             case .LowerLeft:
                 currentState = .selectedQWE
             case .Down:
-                return .space
+                return nil
             case .LowerRight:
                 currentState = .selectedUIO
             }
@@ -166,6 +166,8 @@ class keypad {
                 return keys.delete
             case .Right:
                 return keys.enter
+            case .Down:
+                return keys.space
             default:
                 return nil
             }

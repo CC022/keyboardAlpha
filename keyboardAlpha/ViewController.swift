@@ -14,10 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        controlPad.layer.borderWidth = constants.keypadBorderWidth
-        QWEPad.layer.borderWidth = constants.keypadBorderWidth
-        RTYPad.layer.borderWidth = constants.keypadBorderWidth
-        UIOPad.layer.borderWidth = constants.keypadBorderWidth
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +38,7 @@ class ViewController: UIViewController {
                     inputField.text.removeLast()
                 case .capsLock:
                     keypad01Model.capLocked.toggle()
-                    capLockIndicator.textColor = keypad01Model.capLocked ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+                    capLockIndicator.textColor = keypad01Model.capLocked ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
                 case .enter:
                     inputField.text.append("\n")
                 default:
@@ -63,38 +59,38 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private struct constants {
-        static let keypadBorderWidth = 3 as CGFloat
-        static let keypadBorderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) as CGColor
-        static let keypadBorderInactiveColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) as CGColor
+//        static let keypadBorderWidth = 3 as CGFloat
+        static let keypadActiveColor = #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)
+        static let keypadInactiveColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
     
     func updateBorderColor() -> Void {
         switch keypad01Model.currentState {
         case .selectKeypad:
-            QWEPad.layer.borderColor = constants.keypadBorderInactiveColor
-            RTYPad.layer.borderColor = constants.keypadBorderInactiveColor
-            UIOPad.layer.borderColor = constants.keypadBorderInactiveColor
-            controlPad.layer.borderColor = constants.keypadBorderInactiveColor
+            QWEPad.backgroundColor = constants.keypadInactiveColor
+            RTYPad.backgroundColor = constants.keypadInactiveColor
+            UIOPad.backgroundColor = constants.keypadInactiveColor
+            controlPad.backgroundColor = constants.keypadInactiveColor
         case .selectedQWE:
-            QWEPad.layer.borderColor = constants.keypadBorderColor
-            RTYPad.layer.borderColor = constants.keypadBorderInactiveColor
-            UIOPad.layer.borderColor = constants.keypadBorderInactiveColor
-            controlPad.layer.borderColor = constants.keypadBorderInactiveColor
+            QWEPad.backgroundColor = constants.keypadActiveColor
+            RTYPad.backgroundColor = constants.keypadInactiveColor
+            UIOPad.backgroundColor = constants.keypadInactiveColor
+            controlPad.backgroundColor = constants.keypadInactiveColor
         case .selectedRTY:
-            QWEPad.layer.borderColor = constants.keypadBorderInactiveColor
-            RTYPad.layer.borderColor = constants.keypadBorderColor
-            UIOPad.layer.borderColor = constants.keypadBorderInactiveColor
-            controlPad.layer.borderColor = constants.keypadBorderInactiveColor
+            QWEPad.backgroundColor = constants.keypadInactiveColor
+            RTYPad.backgroundColor = constants.keypadActiveColor
+            UIOPad.backgroundColor = constants.keypadInactiveColor
+            controlPad.backgroundColor = constants.keypadInactiveColor
         case .selectedUIO:
-            QWEPad.layer.borderColor = constants.keypadBorderInactiveColor
-            RTYPad.layer.borderColor = constants.keypadBorderInactiveColor
-            UIOPad.layer.borderColor = constants.keypadBorderColor
-            controlPad.layer.borderColor = constants.keypadBorderInactiveColor
+            QWEPad.backgroundColor = constants.keypadInactiveColor
+            RTYPad.backgroundColor = constants.keypadInactiveColor
+            UIOPad.backgroundColor = constants.keypadActiveColor
+            controlPad.backgroundColor = constants.keypadInactiveColor
         case .selectedControlPad:
-            QWEPad.layer.borderColor = constants.keypadBorderInactiveColor
-            RTYPad.layer.borderColor = constants.keypadBorderInactiveColor
-            UIOPad.layer.borderColor = constants.keypadBorderInactiveColor
-            controlPad.layer.borderColor = constants.keypadBorderColor
+            QWEPad.backgroundColor = constants.keypadInactiveColor
+            RTYPad.backgroundColor = constants.keypadInactiveColor
+            UIOPad.backgroundColor = constants.keypadInactiveColor
+            controlPad.backgroundColor = constants.keypadActiveColor
         }
     }
 }
