@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                     inputField.text.removeLast()
                 case .capsLock:
                     keypad01Model.capLocked.toggle()
-                    capLockIndicator.textColor = keypad01Model.capLocked ? UIColor.green : UIColor.orange
+                    capLockIndicator.textColor = keypad01Model.capLocked ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
                 case .enter:
                     inputField.text.append("\n")
                 default:
